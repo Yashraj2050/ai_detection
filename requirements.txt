@@ -1,0 +1,24 @@
+# Core
+torch>=1.12.0
+torchvision
+timm
+opencv-python
+mediapipe
+numpy
+scikit-learn
+scipy
+pillow
+matplotlib
+streamlit
+pandas
+reportlab
+pytorch-grad-cam
+imageio
+ffmpeg-python
+pyyaml
+web3  # optional
+
+# Dev / utils
+tqdm
+joblib
+
