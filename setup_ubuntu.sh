@@ -2,7 +2,7 @@
 set -e
 sudo apt update && sudo apt upgrade -y
 # Basic build tools
-sudo apt install -y build-essential git ffmpeg libsm6 libxext6 python3 python3-dev python3-venv python3-pip
+sudo apt install -y build-essential git ffmpeg libsm6 libxext6 python3-full python3-dev python3-venv python3-pip
 # Create venv
 python3 -m venv deepguard-venv
 source deepguard-venv/bin/activate
