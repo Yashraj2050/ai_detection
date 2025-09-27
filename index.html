@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepGuard - AI-Powered Deepfake Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ DeepGuard</h1>
+            <p>AI-Powered Deepfake Detection Tool</p>
+        </header>
+        
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <div class="upload-icon">📁</div>
+                        <h3>Upload Image or Video</h3>
+                        <p>Drag and drop files here or click to browse</p>
+                        <p class="file-types">Supported: JPG, PNG, MP4, AVI</p>
+                    </div>
+                    <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.mp4,.avi" hidden>
+                </div>
+            </div>
+
+            <div class="analysis-section" id="analysisSection" style="display: none;">
+                <div class="file-info" id="fileInfo"></div>
+                
+                <div class="results-grid">
+                    <div class="result-card">
+                        <h3>🔍 Artifact Detection</h3>
+                        <div class="score-display">
+                            <div class="score-circle" id="artifactScore">--</div>
+                            <p>Inconsistency Score</p>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>🎭 Motion Analysis</h3>
+                        <div class="score-display">
+                            <div class="score-circle" id="motionScore">--</div>
+                            <p>Temporal Anomalies</p>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card fusion-card">
+                        <h3>🧠 AI Confidence</h3>
+                        <div class="score-display">
+                            <div class="score-circle large" id="fusionScore">--</div>
+                            <p id="confidenceText">Analyzing...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visualizations">
+                    <h3>📊 Analysis Visualizations</h3>
+                    <div class="viz-grid">
+                        <div class="viz-card">
+                            <h4>Error Level Analysis (ELA)</h4>
+                            <div class="viz-placeholder" id="elaViz">ELA visualization will appear here</div>
+                        </div>
+                        <div class="viz-card">
+                            <h4>Discrete Cosine Transform (DCT)</h4>
+                            <div class="viz-placeholder" id="dctViz">DCT visualization will appear here</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-secondary" id="resetBtn">🔄 Analyze Another File</button>
+                    <button class="btn-primary" id="reportBtn">📄 Generate Report</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
